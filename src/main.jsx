@@ -3,8 +3,9 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router'
 
+
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/react-crud-dashboard/">
     <App />
-  </BrowserRouter>,
+  </BrowserRouter>
 )

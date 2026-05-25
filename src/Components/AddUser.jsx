@@ -209,6 +209,7 @@ const AddUser = () => {
             variant="contained"
             sx={{
               background: "linear-gradient(180deg, #2A1E8C 0%, #1A124F 100%)",
+              color:"white",
               display: "flex",
               alignItems: "center",
               gap: 1,

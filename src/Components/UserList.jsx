@@ -78,6 +78,7 @@ const UserList = () => {
       updatedData = updatedData.filter((user) => user.role === search.role);
     }
     setFilteredUsers(updatedData);
+    console.log("HELLO");
   }, [search.nameEmail, search.role, users]);
 
   const handleReset = () => {
@@ -168,6 +169,7 @@ const UserList = () => {
             sx={{
               background: "linear-gradient(180deg, #2A1E8C 0%, #1A124F 100%)",
               display: "flex",
+              color:"white",
               alignItems: "center",
               gap: { xs: 0, md: 1 },
             }}

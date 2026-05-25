@@ -1,11 +1,35 @@
-import { Box, Paper, Typography, Grid, Chip } from "@mui/material";
-import { FaReact, FaUserEdit, FaUsers } from "react-icons/fa";
+import {
+  Box,
+  Paper,
+  Typography,
+  Grid,
+  Chip,
+  Divider,
+} from "@mui/material";
+
+import {
+  FaReact,
+  FaUserEdit,
+  FaUsers,
+  FaFilter,
+  FaMoon,
+} from "react-icons/fa";
+
 import { MdDelete, MdDashboard } from "react-icons/md";
+
 import { AiOutlineApi } from "react-icons/ai";
+
+import {
+  SiMui,
+  SiReactrouter,
+  SiAxios,
+  SiReacthookform,
+  SiZod,
+} from "react-icons/si";
 
 const About = () => {
   return (
-     <Box
+    <Box
       sx={{
         height: "94.8vh",
         overflowY: "auto",
@@ -13,7 +37,8 @@ const About = () => {
         pr: 1,
       }}
     >
-      {/* Heading */}
+      {/* HEADING */}
+
       <Box sx={{ mb: 4 }}>
         <Typography
           variant="h3"
@@ -41,13 +66,15 @@ const About = () => {
             },
           }}
         >
-          A modern CRUD Admin Dashboard built using React JS and Material UI.
+          A modern and fully responsive CRUD Admin Dashboard built using React
+          JS and Material UI.
         </Typography>
       </Box>
 
-      {/* Main Card */}
+      {/* MAIN CARD */}
+
       <Paper
-        elevation={3}
+        elevation={4}
         sx={{
           p: {
             xs: 2,
@@ -58,16 +85,15 @@ const About = () => {
           width: "100%",
           overflowX: "hidden",
           boxSizing: "border-box",
-          boxShadow:5
         }}
       >
-        {/* Project Overview */}
-        <Box sx={{ mb: 5 }}>
+        {/* PROJECT OVERVIEW */}
+
+        <Box sx={{ mb: 6 }}>
           <Typography
             variant="h5"
             fontWeight="bold"
-            sx={{ mb: 2, }}
-            
+            sx={{ mb: 2 }}
           >
             Project Overview
           </Typography>
@@ -80,15 +106,16 @@ const About = () => {
             }}
           >
             This project is a fully functional User Management Dashboard
-            developed using React JS. Users can add new users, update existing
-            user details, delete users, search users, and filter users based on
-            their roles. The application also includes loading states, toast
-            notifications, responsive layouts, and API integration.
+            developed using React JS. Users can add, update, delete, search,
+            and filter users dynamically. The application also supports Dark
+            and Light theme switching, responsive layouts, form validation,
+            API integration, toast notifications, and local storage persistence.
           </Typography>
         </Box>
 
-        {/* Features */}
-        <Box sx={{ mb: 5 }}>
+        {/* FEATURES */}
+
+        <Box sx={{ mb: 6 }}>
           <Typography
             variant="h5"
             fontWeight="bold"
@@ -105,6 +132,8 @@ const About = () => {
               margin: 0,
             }}
           >
+            {/* ADD USER */}
+
             <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Paper
                 elevation={2}
@@ -128,10 +157,12 @@ const About = () => {
                     lineHeight: 1.8,
                   }}
                 >
-                  Easily create and manage new users in the system.
+                  Easily create and manage new users dynamically.
                 </Typography>
               </Paper>
             </Grid>
+
+            {/* UPDATE USER */}
 
             <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Paper
@@ -156,10 +187,12 @@ const About = () => {
                     lineHeight: 1.8,
                   }}
                 >
-                  Edit user details dynamically using forms and APIs.
+                  Edit user information dynamically using forms and APIs.
                 </Typography>
               </Paper>
             </Grid>
+
+            {/* DELETE USER */}
 
             <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Paper
@@ -188,15 +221,108 @@ const About = () => {
                 </Typography>
               </Paper>
             </Grid>
+
+            {/* FILTER USERS */}
+
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+              <Paper
+                elevation={2}
+                sx={{
+                  p: 3,
+                  borderRadius: 3,
+                  textAlign: "center",
+                  height: "100%",
+                }}
+              >
+                <FaFilter size={40} color="#ed6c02" />
+
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  Filter Users
+                </Typography>
+
+                <Typography
+                  variant="body2"
+                  sx={{
+                    mt: 1,
+                    lineHeight: 1.8,
+                  }}
+                >
+                  Filter and search users efficiently based on roles.
+                </Typography>
+              </Paper>
+            </Grid>
+
+            {/* DARK MODE */}
+
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+              <Paper
+                elevation={2}
+                sx={{
+                  p: 3,
+                  borderRadius: 3,
+                  textAlign: "center",
+                  height: "100%",
+                }}
+              >
+                <FaMoon size={40} color="#7b1fa2" />
+
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  Dark / Light Mode
+                </Typography>
+
+                <Typography
+                  variant="body2"
+                  sx={{
+                    mt: 1,
+                    lineHeight: 1.8,
+                  }}
+                >
+                  Seamlessly switch between dark and light themes.
+                </Typography>
+              </Paper>
+            </Grid>
+
+            {/* RESPONSIVE */}
+
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+              <Paper
+                elevation={2}
+                sx={{
+                  p: 3,
+                  borderRadius: 3,
+                  textAlign: "center",
+                  height: "100%",
+                }}
+              >
+                <MdDashboard size={40} color="#0288d1" />
+
+                <Typography variant="h6" sx={{ mt: 2 }}>
+                  Responsive Design
+                </Typography>
+
+                <Typography
+                  variant="body2"
+                  sx={{
+                    mt: 1,
+                    lineHeight: 1.8,
+                  }}
+                >
+                  Optimized for desktop, tablet, and mobile devices.
+                </Typography>
+              </Paper>
+            </Grid>
           </Grid>
         </Box>
 
-        {/* Technologies */}
-        <Box sx={{ mb: 5 , }}>
+        <Divider sx={{ mb: 5 }} />
+
+        {/* TECHNOLOGIES */}
+
+        <Box sx={{ mb: 6 }}>
           <Typography
             variant="h5"
             fontWeight="bold"
-            sx={{ mb:"20px",  mt:"80px"}}
+            sx={{ mb: 3 }}
           >
             Technologies Used
           </Typography>
@@ -209,15 +335,49 @@ const About = () => {
             }}
           >
             <Chip icon={<FaReact />} label="React JS" color="primary" />
-            <Chip label="Material UI" color="secondary" />
-            <Chip label="Axios" color="success" />
-            <Chip label="React Router" color="warning" />
-            <Chip label="MockAPI" color="error" />
-            <Chip label="MUI DataGrid" color="info" />
+
+            <Chip
+              icon={<SiMui />}
+              label="Material UI"
+              color="secondary"
+            />
+
+            <Chip
+              icon={<SiAxios />}
+              label="Axios"
+              color="success"
+            />
+
+            <Chip
+              icon={<SiReactrouter />}
+              label="React Router"
+              color="warning"
+            />
+
+            <Chip
+              icon={<AiOutlineApi />}
+              label="MockAPI"
+              color="error"
+            />
+
+            <Chip
+              icon={<SiReacthookform />}
+              label="React Hook Form"
+              color="info"
+            />
+
+            <Chip
+              icon={<SiZod />}
+              label="Zod Validation"
+              color="primary"
+            />
           </Box>
         </Box>
 
-        {/* Developer Notes */}
+        <Divider sx={{ mb: 5 }} />
+
+        {/* DEVELOPER NOTES */}
+
         <Box>
           <Typography
             variant="h5"
@@ -234,9 +394,10 @@ const About = () => {
               wordBreak: "break-word",
             }}
           >
-            This project was created to practice React JS concepts including
-            CRUD operations, API handling, routing, Material UI integration,
-            reusable components, loading states, and responsive layouts.
+            This project was created to strengthen React JS concepts including
+            CRUD operations, routing, API handling, reusable components,
+            responsive layouts, form handling, validation, theme management,
+            and local storage persistence.
           </Typography>
 
           <Box
@@ -251,7 +412,7 @@ const About = () => {
             <MdDashboard size={25} color="#512da8" />
 
             <Typography variant="body1">
-              Admin Dashboard Project
+              Modern Admin Dashboard UI
             </Typography>
           </Box>
 
